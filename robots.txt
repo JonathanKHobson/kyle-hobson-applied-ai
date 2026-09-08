@@ -1,0 +1,4 @@
+# Project-level reference. Crawlers use the robots.txt at the host root.
+User-agent: *
+Allow: /
+Sitemap: https://jonathankhobson.github.io/kyle-hobson-applied-ai/sitemap.xml
