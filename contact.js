@@ -78,8 +78,8 @@
       title: topic + ' project inquiry',
       name: form.elements.name.value.trim(),
       email: form.elements.email.value.trim(),
-      topic: topic + ' — ' + (form.elements.service.value || 'Scope conversation'),
-      consent: 'Yes — reply about this project only',
+      topic: topic + ' | ' + (form.elements.service.value || 'Scope conversation'),
+      consent: 'Yes, reply about this project only',
       message: (form.elements.company.value.trim() ? 'Organization: ' + form.elements.company.value.trim() + '\n\n' : '') + form.elements.message.value.trim(),
       page: location.origin + location.pathname
     };
@@ -104,7 +104,7 @@
       lastPayload = fingerprint; lastAccepted = Date.now();
       form.reset();
       summary.hidden = true;
-      announce('Your inquiry was sent. Thank you — I’ll reply by email to discuss the next step.', 'success');
+      announce('Your inquiry was sent. Thank you. I’ll reply by email to discuss the next step.', 'success');
     } catch (error) {
       if (error.message === 'service') {
         announce('Your inquiry wasn’t sent. Your draft is still here. Please try again, or email jonathankylehobson@gmail.com.', 'error');
